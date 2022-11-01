@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 3rem;
+    /*this can be changed to fit the boxes later on*/
+    text-align: center;
+}
+
+header {
+    height: 600px;
+    line-height: 600px;
+    border: white 1px solid;
+}
+
+/*this sets the width of a container and centres it without the responsiveness of a flexbox element*/
+#container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scrollelement {
+    height: 600px;
+    line-height: 600px;
+}
+
+#content001 {
+    background-color: aqua;
+}
+
+#content002 {
+    background-color: rgb(0, 224, 224)
+}
+
+#content003 {
+    background-color: rgb(0, 145, 145);
+}
+
+#content004 {
+    background-color: rgb(0, 100, 100);
+}
+
+#content005 {
+    background-color: rgb(0, 63, 63);
+}
+#content006{
+    background-color: rgb(0, 148, 148);
+}
+#content007{
+    background-color: rgb(0, 189, 189);
+}
+
+/*this hides the content ready for animation to run*/
+.jsscroll {
+    opacity: 0;
+}
+
+/*this is triggered when the scroll function is triggered*/
+.scrolled.fadein {
+    animation: fadein ease-in-out 1s both;
+}
+
+.scrolled.slideinright {
+    animation: slideinright 1s ease-in-out both;
+}
+
+.scrolled.slideinleft {
+    animation: slideinleft 1s ease-in-out both;
+}
+
+.scrolled.slideinbottom {
+    animation: slideinbottom 1s ease-in-out both;
+}
+
+.scrolled.pulsein{
+    animation: pulsein 2s ease-in-out both;
+}
+.scrolled.fibshake{
+    animation: fibshake 3s ease-in-out both;
+}
+
+.scrolled.spinit{
+    animation: spinit 2s ease-in-out both;
+}
+
+/*keyframe animations*/
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideinright {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideinleft {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideinbottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/*this particular sequence of code could be used to animate creepy parts of a story*/
+@keyframes pulsein{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: .5;
+    }
+    60%{
+        opacity: .75;
+    }
+    80%{
+        opacity: .25;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes fibshake{
+    1%{
+        transform: translateX(-233px);
+        opacity: 0;
+        rotate: calc(377deg);
+    }
+    2%{
+        transform: translateX(144px);
+        rotate: calc(-233deg);
+    }
+    3%{
+        transform: translateX(-89px);
+        rotate: calc(144deg);
+    }
+    5%{
+        transform: translateX(55px);
+        opacity: 1;
+        rotate: calc(-89deg);
+    }
+    8%{
+        transform: translateX(-34px);
+        rotate: calc(55deg);
+    }
+    13%{
+        transform: translateX(21px);
+        rotate: calc(-34deg);
+    }
+    21%{
+        transform: translateX(-13px);
+        rotate: calc(21deg);
+    }
+    34%{
+        transform: translateX(8px);
+        rotate: calc(-13deg);
+    }
+    55%{
+        transform: translateX(-5px);
+        rotate: calc(8deg);
+    }
+    89%{
+        transform: translateX(3px);
+        rotate: calc(-5deg);
+    }
+    100%{
+        transform: translateX(0);
+        rotate: calc(0deg);
+        opacity: 1;
+    }
+
+}
+
+@keyframes spinit {
+    0%{
+       rotate:calc(1080deg);
+       opacity: 1;
+    }
+    100%{
+        rotate: 0;
+        opacity: 1;
+    }
+}
